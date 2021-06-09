@@ -1,0 +1,114 @@
+<!--Develop a webpage using HTML, CSS and JS
+
+1) Design should have one button in center of the screen
+2) Button style should be done by CSS
+3) When clicking on Button background colour of the webpage should Change using JS -->
+
+
+<html>
+<head>
+<style>
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+      .button {
+        border: none;
+        display: block;
+        text-align: center;
+        cursor: pointer;
+        text-transform: uppercase;
+        outline: none;
+        overflow: hidden;
+        position: relative;
+        color: #E8E8E5;
+        font-weight: 600;
+        font-size: 15px;
+        background-color: #000000;
+        padding: 15px 50px;
+        margin: 0 auto;
+      }
+      .button span {
+        position: relative;
+        z-index: 1;
+      }
+      .button:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 470%;
+        width: 140%;
+        background: #575756;
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+        -webkit-transform: translateX(-100%) translateY(-25%) rotate(45deg);
+        transform: translateX(-100%) translateY(-25%) rotate(45deg);
+      }
+      .button:hover:after {
+        -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+        transform: translateX(-9%) translateY(-25%) rotate(45deg);
+      }
+</style>
+    <script>
+        var count = 0
+     function setColor(){
+        var bodyProperty = document.getElementById('btn')
+        if (count == 0){
+            bodyProperty.style.backgroundColor = "FF9999";
+            count=1;        
+        }
+        else if (count == 1){
+            bodyProperty.style.backgroundColor = "66FF66";
+            count=2;        
+        }
+        else if  (count == 2){
+            bodyProperty.style.backgroundColor = "8095FF";
+            count=3;        
+        }
+        else if (count == 3){
+            bodyProperty.style.backgroundColor = "FF6699";
+            count=4;        
+        }
+        else if (count == 4){
+           
+            bodyProperty.style.backgroundColor = "#EE82EE";
+            count=5;        
+        }
+        else if (count == 5){
+            bodyProperty.style.backgroundColor = "CCFFCC";
+            count=6;        
+        }
+        else if (count == 6){
+            bodyProperty.style.backgroundColor = "D8BFD8";
+            count=7;        
+        }
+        else if  (count == 7){
+            bodyProperty.style.backgroundColor = "Aqua";
+            count=8;        
+        }
+        else if (count == 8){
+            bodyProperty.style.backgroundColor = "FF7F50";
+            count=9;        
+        }
+        else if  (count == 9){
+            bodyProperty.style.backgroundColor = "FFD700";
+            count=10;        
+        }
+        
+    
+    }
+    </script>
+</head>
+<body id='btn'>
+   
+
+<div class="center">
+  <button id="button" onclick="setColor()" class="button"><span>Click Me! to see Magic</span></button>
+</div>
+
+</body>
+</html>
