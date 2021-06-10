@@ -54,52 +54,11 @@
       }
 </style>
     <script>
-        var count = 0
+        var colors = ['FF9999','66FF66','8095FF','FF6699','EE82EE', 'CCFFCC', 'D8BFD8', 'Aqua', 'FF7F50', 'FFD700' ]
      function setColor(){
         var bodyProperty = document.getElementById('btn')
-        if (count == 0){
-            bodyProperty.style.backgroundColor = "FF9999";
-            count=1;        
-        }
-        else if (count == 1){
-            bodyProperty.style.backgroundColor = "66FF66";
-            count=2;        
-        }
-        else if  (count == 2){
-            bodyProperty.style.backgroundColor = "8095FF";
-            count=3;        
-        }
-        else if (count == 3){
-            bodyProperty.style.backgroundColor = "FF6699";
-            count=4;        
-        }
-        else if (count == 4){
-           
-            bodyProperty.style.backgroundColor = "#EE82EE";
-            count=5;        
-        }
-        else if (count == 5){
-            bodyProperty.style.backgroundColor = "CCFFCC";
-            count=6;        
-        }
-        else if (count == 6){
-            bodyProperty.style.backgroundColor = "D8BFD8";
-            count=7;        
-        }
-        else if  (count == 7){
-            bodyProperty.style.backgroundColor = "Aqua";
-            count=8;        
-        }
-        else if (count == 8){
-            bodyProperty.style.backgroundColor = "FF7F50";
-            count=9;        
-        }
-        else if  (count == 9){
-            bodyProperty.style.backgroundColor = "FFD700";
-            count=10;        
-        }
         
-    
+            bodyProperty.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
     }
     </script>
 </head>
